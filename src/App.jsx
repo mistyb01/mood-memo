@@ -1,11 +1,17 @@
 import React from 'react';
-import './App.css';
+import MoodGrid from './components/MoodGrid';
+import AddMoodForm from './components/AddMoodForm';
+import Header from './components/Header';
 
 function App() {
   return (
-    <p>
-      Cleanedup React App
-    </p>
+    <>
+      <Header/>
+      <main>
+        <MoodGrid/>
+        <AddMoodForm/>
+      </main>
+    </>
   );
 }
 
