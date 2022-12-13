@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MoodGrid() {
+function MoodGrid(props) {
     return (
         <section className="mood-grid-container">
             <section className="month-heading">
@@ -9,7 +9,12 @@ function MoodGrid() {
                 <button>👉🏽</button>
             </section>
             <ol className="mood-grid">
-                <li>1</li>
+                {props.moodData.map((item) => {
+                    return (
+                        <li>{item.day}</li>
+                    )
+                })}
+                {/* <li>1</li>
                 <li>2</li>
                 <li>3</li>
                 <li>4</li>
@@ -39,7 +44,7 @@ function MoodGrid() {
                 <li>28</li>
                 <li>29</li>
                 <li>30</li>
-                <li>31</li>
+                <li>31</li> */}
             </ol>
         </section>
     );
