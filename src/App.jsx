@@ -15,7 +15,7 @@ function getDaysInMonthUTC(month, year) {
 
 let currMonthDays = getDaysInMonthUTC(11, 2022);
 
-const MOCK = currMonthDays.map((day) => ({fullDate: day, day: day.getDate(), mood: "no mood", notes: "no note"}));
+const MOCK = currMonthDays.map((day) => ({fullDate: day, day: day.getDate(), mood: "", notes: ""}));
 console.log(MOCK);
 
 

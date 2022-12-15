@@ -10,8 +10,11 @@ function Tooltip(props) {
                     return (
                         <>
                             <h3>{item.fullDate.toDateString()}</h3>
-                            <p><strong>mood</strong> {item.mood}</p>
-                            <p>{item.notes}</p>
+                            {(item.mood == "" && item.notes == "") ?
+                                <p>no entry.</p> :
+                                <strong>{item.mood}</strong>
+                            }
+                            <p></p>
                         </>
                     );
                 }
