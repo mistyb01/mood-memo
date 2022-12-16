@@ -8,14 +8,14 @@ function Tooltip(props) {
             {props.moodData.map((item) => {
                 if (item.day == props.hoveredDay) {
                     return (
-                        <>
+                        <div className='tooltip-container' key={item.fullDate}>
                             <h3>{item.fullDate.toDateString()}</h3>
                             {(item.mood == "" && item.notes == "") ?
                                 <p>no entry.</p> :
                                 <strong>{item.mood}</strong>
                             }
                             <p></p>
-                        </>
+                        </div>
                     );
                 }
             })}

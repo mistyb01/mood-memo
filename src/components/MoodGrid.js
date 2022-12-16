@@ -23,9 +23,8 @@ function MoodGrid(props) {
     }
 
     return (
-        <>
-        {hover && <Tooltip moodData={props.moodData} hoveredDay={hoveredDay} xCoord={mouseX} yCoord={mouseY}/>}
         <section className="mood-grid-container">
+        {hover && <Tooltip moodData={props.moodData} hoveredDay={hoveredDay} xCoord={mouseX} yCoord={mouseY}/>}
             <section className="month-heading">
                 <button>👈🏽</button>
                 <h1>december</h1>
@@ -34,15 +33,12 @@ function MoodGrid(props) {
             <ol className="mood-grid" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
                 {props.moodData.map((item) => {
                     return (
-                        <>
-                            <li 
-                            id={item.day}>{item.day}</li>
-                        </>
+                        <li id={item.day} key={item.fullDate}>{item.day}</li>
                     )
                 })}
             </ol>
         </section>
-    </>
+    
     );
 }
 
